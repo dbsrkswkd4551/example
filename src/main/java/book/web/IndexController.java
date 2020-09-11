@@ -4,7 +4,6 @@ import book.config.auth.LoginUser;
 import book.config.auth.dto.SessionUser;
 import book.service.posts.PostsService;
 import book.web.dto.PostsResponseDto;
-import lombok.Getter;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -49,8 +48,11 @@ public class IndexController {
         return "notice";
     }
 
-    @GetMapping("/login")
-    public String Login(){
-        return "login";
+    @GetMapping("/loginuser")
+    public String LoginUser(){
+        return "loginUser";
     }
+
+    @GetMapping("/faq")
+    public String Faq() { return "faq"; }
 }
